@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Provoke";
+    src: url("/fonts/Provoke-Inline-Thin.ttf") format("tff")
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
