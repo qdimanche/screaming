@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['email']))
+    header('location:login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
 <body class="bg-[#1D1D1D]">
 
 <?php
-    include ("header.php")
+include("header.php")
 ?>
 
 
@@ -100,19 +106,19 @@
 
             <div class="">
                 <a href="">
-                    <img src="../images/icon/facebook-white.svg" class="w-6">
+                    <img src="../../images/icon/facebook-white.svg" class="w-6">
                 </a>
             </div>
 
             <div>
                 <a href="">
-                    <img src="../images/icon/instagram-white.svg" class="w-6 mx-5">
+                    <img src="../../images/icon/instagram-white.svg" class="w-6 mx-5">
                 </a>
             </div>
 
             <div>
                 <a href="">
-                    <img src="../images/icon/twitter-white.svg" class="w-6">
+                    <img src="../../images/icon/twitter-white.svg" class="w-6">
                 </a>
             </div>
 
@@ -130,7 +136,7 @@
     <div class="flex">
         <span class="text-white mr-20">108 commentaires</span>
         <a href="" class="flex ">
-            <img src="../images/icon/sort.svg" alt="">
+            <img src="../../images/icon/sort.svg" alt="">
             <p class="text-[#808080] ml-3">TRIER PAR</p>
         </a>
     </div>
@@ -138,13 +144,13 @@
 
     <div class="flex flex-col mt-11">
         <div class="flex items-center">
-            <img src="../images/avatar-5.jpeg " class="w-11 rounded-full " alt="">
+            <img src="../../images/avatar-5.jpeg " class="w-11 rounded-full " alt="">
             <input type="text" class="placeholder:text-[#808080] pb-1 border-0 border-b border-[#404040] bg-transparent ml-6" placeholder="Ajouter un commentaire" >
         </div>
 
         <div class="flex my-11">
             <div class="w-fit">
-                <img src="../images/avatar-1.jpeg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
+                <img src="../../images/avatar-1.jpeg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
             </div>
 
 
@@ -155,17 +161,17 @@
                 <div class="flex">
                     <div class="flex"></div>
                     <a href="">
-                        <img src="../images/icon/like.svg" class="w-4" alt="">
+                        <img src="../../images/icon/like.svg" class="w-4" alt="">
                     </a>
                     <p class="text-[#808080] ml-1">6</p>
                     <a href="">
-                        <img src="../images/icon/dislike.svg" class="w-4 ml-6" alt="">
+                        <img src="../../images/icon/dislike.svg" class="w-4 ml-6" alt="">
                     </a>
                     <a class="text-[#808080] ml-6" href="">RÉPONDRE</a>
                 </div>
 
                 <a href="" class="flex mt-3">
-                    <img src="../images/icon/triangle.svg" class="w-4 mr-4" alt="">
+                    <img src="../../images/icon/triangle.svg" class="w-4 mr-4" alt="">
                     <span class="text-[#F14747]">Afficher les réponses</span>
                 </a>
 
@@ -175,7 +181,7 @@
 
         <div class="flex mb-11">
             <div class="w-fit">
-                <img src="../images/avatar-2.webp" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
+                <img src="../../images/avatar-2.webp" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
             </div>
 
 
@@ -186,17 +192,17 @@
                 <div class="flex">
                     <div class="flex"></div>
                     <a href="">
-                        <img src="../images/icon/like.svg" class="w-4" alt="">
+                        <img src="../../images/icon/like.svg" class="w-4" alt="">
                     </a>
                     <p class="text-[#808080] ml-1">6</p>
                     <a href="">
-                        <img src="../images/icon/dislike.svg" class="w-4 ml-6" alt="">
+                        <img src="../../images/icon/dislike.svg" class="w-4 ml-6" alt="">
                     </a>
                     <a class="text-[#808080] ml-6" href="">RÉPONDRE</a>
                 </div>
 
                 <a href="" class="flex mt-3">
-                    <img src="../images/icon/triangle.svg" class="w-4 mr-4" alt="">
+                    <img src="../../images/icon/triangle.svg" class="w-4 mr-4" alt="">
                     <span class="text-[#F14747]">Afficher les réponses</span>
                 </a>
 
@@ -206,7 +212,7 @@
 
         <div class="flex mb-11">
             <div class="w-fit">
-                <img src="../images/avatar-3.jpeg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
+                <img src="../../images/avatar-3.jpeg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
             </div>
 
 
@@ -217,17 +223,17 @@
                 <div class="flex">
                     <div class="flex"></div>
                     <a href="">
-                        <img src="../images/icon/like.svg" class="w-4" alt="">
+                        <img src="../../images/icon/like.svg" class="w-4" alt="">
                     </a>
                     <p class="text-[#808080] ml-1">6</p>
                     <a href="">
-                        <img src="../images/icon/dislike.svg" class="w-4 ml-6" alt="">
+                        <img src="../../images/icon/dislike.svg" class="w-4 ml-6" alt="">
                     </a>
                     <a class="text-[#808080] ml-6" href="">RÉPONDRE</a>
                 </div>
 
                 <a href="" class="flex mt-3">
-                    <img src="../images/icon/triangle.svg" class="w-4 mr-4" alt="">
+                    <img src="../../images/icon/triangle.svg" class="w-4 mr-4" alt="">
                     <span class="text-[#F14747]">Afficher les réponses</span>
                 </a>
 
@@ -237,7 +243,7 @@
 
         <div class="flex mb-11">
             <div class="w-fit">
-                <img src="../images/avatar-4.jpg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
+                <img src="../../images/avatar-4.jpg" class="lg:w-14 md:w-14 w-[50px] rounded-full" alt="">
             </div>
 
 
@@ -248,17 +254,17 @@
                 <div class="flex">
                     <div class="flex"></div>
                     <a href="">
-                        <img src="../images/icon/like.svg" class="w-4" alt="">
+                        <img src="../../images/icon/like.svg" class="w-4" alt="">
                     </a>
                     <p class="text-[#808080] ml-1">6</p>
                     <a href="">
-                        <img src="../images/icon/dislike.svg" class="w-4 ml-6" alt="">
+                        <img src="../../images/icon/dislike.svg" class="w-4 ml-6" alt="">
                     </a>
                     <a class="text-[#808080] ml-6" href="">RÉPONDRE</a>
                 </div>
 
                 <a href="" class="flex mt-3">
-                    <img src="../images/icon/triangle.svg" class="w-4 mr-4" alt="">
+                    <img src="../../images/icon/triangle.svg" class="w-4 mr-4" alt="">
                     <span class="text-[#F14747]">Afficher les réponses</span>
                 </a>
 
@@ -283,6 +289,6 @@
 
 </body>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
 </html>

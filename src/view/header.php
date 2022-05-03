@@ -3,19 +3,19 @@
         <div class="flex justify-between">
             <div class="flex">
                 <a href="index.php" class="flex items-center">
-                    <img src="../images/screaming-logo-with-text.png" class="mr-3 lg:h-16 h-20" alt="Screaming Logo">
+                    <img src="../../images/screaming-logo-with-text.png" class="mr-3 lg:h-16 h-20" alt="Screaming Logo">
                 </a>
 
                 <div class="hidden items-center ml-6 lg:flex lg:w-auto" id="mobile-menu-2">
                     <ul class="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0 lg:text-sm lg:font-medium">
                         <li>
-                            <a href="/src/" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747] bg-blue-700 rounded lg:bg-transparent lg:p-0 text-white" aria-current="page">Accueil</a>
+                            <a href="/src/view/" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747] bg-blue-700 rounded lg:bg-transparent lg:p-0 text-white" aria-current="page">Accueil</a>
                         </li>
                         <li>
-                            <a href="/src/#nouveautes" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747]  lg:p-0">Nouveautés</a>
+                            <a href="/src/view/#nouveautes" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747]  lg:p-0">Nouveautés</a>
                         </li>
                         <li>
-                            <a href="/src/#films-populaires" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747]  lg:p-0">Films populaires</a>
+                            <a href="/src/view/#films-populaires" class="block py-2 pr-4 pl-3 text-white hover:text-[#F14747]  lg:p-0">Films populaires</a>
                         </li>
                     </ul>
                 </div>
@@ -34,20 +34,20 @@
                     <div class="flex items-center md:order-2">
                         <button type="button" class="flex mr-3 text-sm rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="../images/icon/profile.svg" alt="user photo">
+                            <img class="w-8 h-8 rounded-full" src="../../images/icon/profile.svg" alt="user photo">
                         </button>
 
-                        <div class="hidden z-50 my-4 text-base list-none bg-[#1D1D1D] rounded divide-y divide-gray-100 shadow " id="dropdown" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1015px, 1022.5px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
+                        <div class="hidden z-50 my-4 text-base list-none bg-[#1D1D1D] rounded divide-y divide-[#F14747] shadow " id="dropdown" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1015px, 1022.5px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
                             <div class="py-3 px-4">
-                                <span class="block text-sm text-white">Bonnie Green</span>
-                                <span class="block text-sm font-medium text-gray-500 truncate">name@flowbite.com</span>
+                                <span class="block text-sm font-medium text-white truncate"><?php echo($_SESSION['username']) ?></span>
+                                <span class="block text-sm mt-2 font-medium text-slate-100 truncate"><?php echo($_SESSION['email']) ?></span>
                             </div>
                             <ul class="py-1" aria-labelledby="dropdown">
                                 <li>
                                     <a href="profile.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Profil</a>
                                 </li>
                                 <li>
-                                    <a href="disconnect.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
+                                    <a href="../controller/disconnect.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
                                 </li>
                             </ul>
                         </div>
@@ -71,17 +71,17 @@
                     <i class="fas fa-times"></i>
 
                     <a href="profile.php">
-                        <img src="../images/avatar-5.jpeg" class="w-20 rounded-full mb-6" alt="">
+                        <img src="../../images/avatar-5.jpeg" class="w-20 rounded-full mb-6" alt="">
                     </a>
 
 
 
 
 
-                    <span class="block  text-white">Bonnie Green</span>
-                    <span class="block  font-medium text-gray-500 truncate">name@flowbite.com</span>
+                    <span class="block  text-white"><?php echo($_SESSION['username']) ?></span>
+                    <span class="block  font-medium text-gray-500 truncate"><?php echo($_SESSION['email']) ?></span>
 
-                    <a href="disconnect.php" class="text-[#F14747] mt-6 font-bold">Déconnexion</a>
+                    <a href="../controller/disconnect.php" class="text-[#F14747] mt-6 font-bold">Déconnexion</a>
 
 
 
@@ -97,9 +97,9 @@
                         </li>
 
                         <div class="flex ">
-                            <li><a href="/src/">Accueil</a></li>
-                            <li><a href="/src/#nouveautes">Nouveautés</a></li>
-                            <li><a href="/src/#films-populaires">Films populaires</a></li>
+                            <li><a href="/src/view">Accueil</a></li>
+                            <li><a href="/src/view/#nouveautes">Nouveautés</a></li>
+                            <li><a href="/src/view/#films-populaires">Films populaires</a></li>
                         </div>
 
 

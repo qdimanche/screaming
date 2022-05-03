@@ -14,7 +14,7 @@
             <p class="text-red-100">Connecté à vos peurs</p>
         </div>
         <div class="container mx-auto flex flex-col items-center">
-            <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-lg" action="../src/checkLogin.php" method="post">
+            <form class="shadow-lg w-80 p-4 flex flex-col bg-[#343434] rounded-lg" action="../controller/checkLogin.php" method="post">
                 <input name="email" type="email" placeholder="Email" class="mb-3 py-3 px-4 border border-gray-400 rounded-md bg-white" />
                 <input name="password" type="password" placeholder="Mot de passe" class="mb-3 py-3 px-4 border border-gray-400 rounded-md bg-white" />
                 <button class="w-full bg-red-500 text-white p-3 rounded-lg font-semibold text-lg">Connexion</button>

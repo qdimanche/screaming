@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['email']))
+    header('location:login.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +17,7 @@
 <body class="bg-[#1D1D1D]">
 
     <?php
-    include ("header.php")
+    include("header.php")
     ?>
 
     <div class="flex border-t border-[#404040]">
@@ -23,28 +30,28 @@
 
 
                 <a href="profile.php" class="flex lg:space-x-4">
-                    <img src="../images/icon/profile.svg" class="w-6" alt="">
+                    <img src="../../images/icon/profile.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Compte</div></li>
                 </a>
 
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../images/icon/credit-card.svg" class="w-6" alt="">
+                    <img src="../../images/icon/credit-card.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Facturation</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../images/icon/lock.svg" class="w-6" alt="">
+                    <img src="../../images/icon/lock.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Sécurité</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../images/icon/ringing-bell.svg" class="w-6" alt="">
+                    <img src="../../images/icon/ringing-bell.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Notifications</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../images/icon/information-sign.svg" class="w-6" alt="">
+                    <img src="../../images/icon/information-sign.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Aide</div></li>
                 </a>
 
@@ -57,12 +64,12 @@
 
 
                 <a href="" class="flex lg:space-x-4 lg:self-start">
-                    <img src="../images/icon/chat.svg" class="w-6" alt="">
+                    <img src="../../images/icon/chat.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">À propos</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../images/icon/eye.svg" class="w-6" alt="">
+                    <img src="../../images/icon/eye.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Politique de confidentialité</div></li>
                 </a>
 
@@ -73,7 +80,7 @@
 
         <div class="flex flex-col lg:w-full w-5/6">
             <div class="bg-[url('../images/header-cover-settings.jpg')] bg-cover bg-center h-fit px-20 lg:py-40 py-24">
-                <span class="text-4xl text-white">Bonjour Joker</span>
+                <span class="text-4xl text-white">Bonjour <?php echo($_SESSION['username']) ?></span>
                 <p class="text-white mt-6 font-extralight">Il s'agit de votre page profil. Vous pouvez modifier vos informations personnelles dans les champs suivants.</p>
                 <a href="">
                     <button class="border-2 mt-10 border-[#F14747] text-white px-4 py-2 rounded-md text-1xl font-medium hover:bg-[#F14747] transition duration-300 w-40">Éditer le profil</button>
@@ -128,7 +135,7 @@
 
                 <div class="flex mx-auto">
                     <div class="flex flex-col items-center bg-[#343434] lg:mx-6 mx-12 mt-[-4em] lg:px-4 px-12 rounded lg:flex hidden h-fit">
-                        <img src="../images/avatar-5.jpeg" class="w-32 rounded-full mt-[-3em]" alt="">
+                        <img src="../../images/avatar-5.jpeg" class="w-32 rounded-full mt-[-3em]" alt="">
 
                         <div class="flex lg:space-x-4 mt-6 justify-center">
 
@@ -175,6 +182,6 @@
 
 </body>
 <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
-<script src="app.js"></script>
+<script src="../app.js"></script>
 <script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
 </html>

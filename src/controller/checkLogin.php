@@ -14,10 +14,12 @@
                 $res = $query->fetch(PDO::FETCH_ASSOC);
                 if ($res) {
                     header('Location: index.php');
+                    $_SESSION['username']= $res['username'];
                     $_SESSION['id']= $res['id'];
                     $_SESSION['email']= $res['email'];
                     $_SESSION['firstname']= $res['first_name'];
                     $_SESSION['lastname']= $res['last_name'];
+                    $_SESSION['registration_date']= (date("j M Y",strtotime($res['registration_date'])));
                 } else {
                     echo 'Erreur de login ou mdp';
                 }

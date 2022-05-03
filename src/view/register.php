@@ -14,9 +14,10 @@
             <p class="text-red-100">Connecté à vos peurs</p>
         </div>
         <div class="container mx-auto flex flex-col items-center">
-            <form method="post" class="shadow-lg w-80 p-8 space-y-6 flex bg-[#343434] flex-col rounded-lg" action="../src/registerAction.php">
+            <form method="post" class="shadow-lg w-80 p-8 space-y-6 flex bg-[#343434] flex-col rounded-lg" action="../controller/registerAction.php">
                 <input name="firstName" type="text" placeholder="Prénom" class=" py-3 px-4 border border-gray-400 rounded-md" />
                 <input name="lastName" type="text" placeholder="Nom" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <input name="username" type="text" placeholder="Nom d'utilisateur" class=" py-3 px-4 border border-gray-400 rounded-md" />
                 <input name="email" type="email" placeholder="Email" class=" py-3 px-4 border border-gray-400 rounded-md" />
                 <input name="password" type="password" placeholder="Mot de passe" class=" py-3 px-4 border border-gray-400 rounded-md" />
                 <input name="confirmPassword" type="password" placeholder="Confirmez votre mot de passe" class=" py-3 px-4 border border-gray-400 rounded-md" />

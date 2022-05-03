@@ -1,5 +1,6 @@
 <?php
 if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['password']) {
+    $username= $_POST['username'];
     $email = $_POST['email'];
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -9,7 +10,9 @@ if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['pass
     $checkEmail->execute();
     $count = $checkEmail->rowCount();
     if ($count == 0) {
-        $insert = "INSERT INTO user(first_name, last_name, email, password) VALUES ('$firstName', '$lastName', '$email', '$password')";
+
+        $date = date('Y-m-d H:i:s');
+        $insert = "INSERT INTO user(username, first_name, last_name, email, password, registration_date) VALUES ('$username', '$firstName', '$lastName', '$email', '$password', '$date')";
         $query = $db->prepare($insert);
         $query->execute();
         header("location:index.php");
@@ -21,9 +24,11 @@ if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['pass
 
 
         $_SESSION['email']= $data['email'];
+        $_SESSION['username']= $data['username'];
         $_SESSION['firstname']= $data['first_name'];
         $_SESSION['lastname']= $data['last_name'];
         $_SESSION['id']= $data['id'];
+        $_SESSION['registration_date']= (date("j M Y",strtotime($data['registration_date'])));
 
 
     } else {
