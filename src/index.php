@@ -59,23 +59,17 @@
                                     <img class="w-8 h-8 rounded-full" src="../icons/profile.svg" alt="user photo">
                                 </button>
 
-                                <div class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1015px, 1022.5px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
+                                <div class="hidden z-50 my-4 text-base list-none bg-[#1D1D1D] rounded divide-y divide-gray-100 shadow " id="dropdown" style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate3d(1015px, 1022.5px, 0px);" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="top">
                                     <div class="py-3 px-4">
-                                        <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                                        <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
+                                        <span class="block text-sm text-white">Bonnie Green</span>
+                                        <span class="block text-sm font-medium text-gray-500 truncate">name@flowbite.com</span>
                                     </div>
                                     <ul class="py-1" aria-labelledby="dropdown">
                                         <li>
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                                            <a href="#" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Profil</a>
                                         </li>
                                         <li>
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                                            <a href="#" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -93,10 +87,21 @@
                 </div>
 
                 <div class="lg:hidden block items-center">
-                    <div class="menu_overlay">
+                    <div class="menu_overlay flex flex-col">
 
 
                         <i class="fas fa-times"></i>
+
+
+                        <img src="../images/avatar-5.jpeg" class="w-20 rounded-full mb-6" alt="">
+
+
+
+
+                        <span class="block  text-white">Bonnie Green</span>
+                        <span class="block  font-medium text-gray-500 truncate">name@flowbite.com</span>
+
+                        <a href="" class="text-[#F14747] mt-6 font-bold">Déconnexion</a>
 
 
 
@@ -575,74 +580,11 @@
 
 
 
-<footer class="flex flex-col items-center py-24">
+<?php
 
-    <div class="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 mx-8  lg:gap-6 gap-5 mb-16">
+require "footer.php";
 
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080]  md:text-sm hover:text-[#999999]">Nous contacter</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080] md:text-sm hover:text-[#999999]">Confidentialité</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080]   md:text-sm hover:text-[#999999]">Informations légales</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080] md:text-sm hover:text-[#999999]">Préférences des cookies</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080] md:text-sm hover:text-[#999999]">Centre d'aide</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080] md:text-sm hover:text-[#999999]">Conditions d'utilisation</a>
-        </div>
-
-        <div class="lg:flex lg:justify-center">
-            <a href="" class="text-[#808080]  md:text-smhover:text-[#999999]">Mentions légales</a>
-        </div>
-
-
-
-
-
-
-    </div>
-
-    <div class="flex">
-        
-        <div>
-            <a href="">
-                <img src="../icons/facebook.svg" class="w-10">
-            </a>
-        </div>
-
-        <div>
-            <a href="">
-                <img src="../icons/instagram.svg" class="w-10 mx-10">
-            </a>
-        </div>
-
-        <div>
-            <a href="">
-                <img src="../icons/twitter.svg" class="w-10">
-            </a>
-        </div>
-
-
-        
-    </div>
-
-    <div class="mt-16">
-        <p class="text-[#4d4d4d]">@Screaming 2022 - Tous droits réservés</p>
-    </div>
-
-</footer>
+?>
 
 
 
