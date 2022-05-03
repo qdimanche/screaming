@@ -47,7 +47,7 @@
                                     <a href="profile.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Profil</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
+                                    <a href="disconnect.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
                                 </li>
                             </ul>
                         </div>
@@ -81,7 +81,7 @@
                     <span class="block  text-white">Bonnie Green</span>
                     <span class="block  font-medium text-gray-500 truncate">name@flowbite.com</span>
 
-                    <a href="" class="text-[#F14747] mt-6 font-bold">Déconnexion</a>
+                    <a href="disconnect.php" class="text-[#F14747] mt-6 font-bold">Déconnexion</a>
 
 
 
