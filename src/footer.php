@@ -1,4 +1,4 @@
-<footer class="flex flex-col items-center py-24">
+<footer class="flex flex-col items-center py-12">
 
     <div class="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 mx-8  lg:gap-6 gap-5 mb-16">
 
@@ -41,19 +41,20 @@
 
         <div>
             <a href="">
-                <img src="../icons/facebook.svg" class="w-10">
+                <img src="/images/icon/facebook.svg" class="w-10">
             </a>
         </div>
 
         <div>
             <a href="">
-                <img src="../icons/instagram.svg" class="w-10 mx-10">
+                <img src= "/images/icon/instagram.svg" class="w-10 mx-10">
             </a>
         </div>
 
+
         <div>
             <a href="">
-                <img src="../icons/twitter.svg" class="w-10">
+                <img src="/images/icon/twitter.svg" class="w-10">
             </a>
         </div>
 

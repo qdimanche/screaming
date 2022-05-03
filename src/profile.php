@@ -18,26 +18,32 @@
 <body class="bg-[#1D1D1D]">
 
 
-    <div class="w-4/5  mx-auto h-screen flex flex-col justify-center">
-        <div class="flex justify-between items-center mb-20">
+    <?php
+        include ("header.php")
+    ?>
+
+
+
+    <div class="w-4/5  mx-auto mt-6 flex flex-col justify-center">
+        <div class="flex justify-between items-center mb-14">
             <div class="flex">
                 <img src="../images/avatar-5.jpeg" class="md:w-32 w-20 md:mr-0 mr-6 rounded-full md:mr-20" alt="">
                 <div class="flex flex-col justify-center space-y-2">
                     <span class="text-white font-bold">Joker</span>
                     <div class="flex space-x-3">
-                        <img src="../icons/calendar.svg" class="w-6" alt="">
+                        <img src="../images/icon/calendar.svg" class="w-6" alt="">
                         <p class="text-[#808080]">A rejoint en octobre 2021</p>
                     </div>
                     <div class="flex space-x-3">
-                        <img src="../icons/clapper-board.svg" class="w-6" alt="">
+                        <img src="../images/icon/clapper-board.svg" class="w-6" alt="">
                         <p class="text-[#808080]">12 films visionnés</p>
                     </div>
                 </div>
             </div>
 
             <div class="">
-                <a href="settings.html">
-                    <img src="../icons/setting.svg" class="md:w-12 w-10 border rounded-full p-2" alt="">
+                <a href="settings.php">
+                    <img src="../images/icon/setting.svg" class="md:w-12 w-10 border rounded-full p-2" alt="">
                 </a>
             </div>
         </div>
@@ -59,11 +65,11 @@
                     <div class="flex">
                         <div class="flex"></div>
                         <a href="">
-                            <img src="../icons/like.svg" class="w-4" alt="">
+                            <img src="../images/icon/like.svg" class="w-4" alt="">
                         </a>
                         <p class="text-[#808080] ml-1">6</p>
                         <a href="">
-                            <img src="../icons/triangle-grey.svg" class="w-4 ml-6" alt="">
+                            <img src="../images/icon/triangle-grey.svg" class="w-4 ml-6" alt="">
                         </a>
                     </div>
 
@@ -80,7 +86,12 @@
 
 
 
-
+    <?php
+    include("footer.php");
+    ?>
 
 </body>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="app.js"></script>
+<script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
 </html>

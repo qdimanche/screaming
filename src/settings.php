@@ -9,14 +9,12 @@
 </head>
 <body class="bg-[#1D1D1D]">
 
-    <div class="flex">
-        <div class="flex flex-col lg:px-8 px-2 w-1/6 h-content border-r border-[#404040]">
-            <div class="flex justify-center">
-                <a href="index.php">
-                    <img src="../images/screaming-logo-with-text.png" class="w-44 my-8 lg:block hidden" alt="">
-                    <img src="../images/screaming-logo.webp" class="w-14 my-8 lg:hidden block" alt="">
-                </a>
-            </div>
+    <?php
+    include ("header.php")
+    ?>
+
+    <div class="flex border-t border-[#404040]">
+        <div class="flex flex-col lg:px-8 py-8 px-2 w-1/6 h-content border-r border-[#404040]">
 
 
 
@@ -24,29 +22,29 @@
             <ul class="flex flex-col lg:items-start items-center w-full space-y-6 mb-12">
 
 
-                <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/profile.svg" class="w-6" alt="">
+                <a href="profile.php" class="flex lg:space-x-4">
+                    <img src="../images/icon/profile.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Compte</div></li>
                 </a>
 
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/credit-card.svg" class="w-6" alt="">
+                    <img src="../images/icon/credit-card.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Facturation</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/lock.svg" class="w-6" alt="">
+                    <img src="../images/icon/lock.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Sécurité</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/ringing-bell.svg" class="w-6" alt="">
+                    <img src="../images/icon/ringing-bell.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Notifications</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/information-sign.svg" class="w-6" alt="">
+                    <img src="../images/icon/information-sign.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Aide</div></li>
                 </a>
 
@@ -59,12 +57,12 @@
 
 
                 <a href="" class="flex lg:space-x-4 lg:self-start">
-                    <img src="../icons/chat.svg" class="w-6" alt="">
+                    <img src="../images/icon/chat.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">À propos</div></li>
                 </a>
 
                 <a href="" class="flex lg:space-x-4">
-                    <img src="../icons/eye.svg" class="w-6" alt="">
+                    <img src="../images/icon/eye.svg" class="w-6" alt="">
                     <li class="text-white"><div class="lg:block hidden">Politique de confidentialité</div></li>
                 </a>
 
@@ -171,6 +169,12 @@
     </div>
 
 
+    <?php
+        include("footer.php");
+    ?>
 
 </body>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="app.js"></script>
+<script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
 </html>

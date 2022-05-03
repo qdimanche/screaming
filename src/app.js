@@ -9,3 +9,9 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     overlay.style.transform = "translateY(-110%)";
 });
+
+
+
+window.addEventListener('popstate', function (event) {
+    overlay.style.transform = "translateY(-110%)";
+});
