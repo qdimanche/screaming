@@ -3,7 +3,7 @@
     session_start();
 
 
-     if($_POST['email'] && $_POST['username'] && $_POST['firstName'] && $_POST['lastName'] && $_POST['password'] ){
+     if($_POST['email'] && $_POST['username'] && $_POST['firstName'] && $_POST['lastName'] ){
          $username = $_POST['username'];
          $password = $_POST['password'];
          $firstName = $_POST['firstName'];
@@ -28,8 +28,7 @@
          $_SESSION['lastname']= $data['last_name'];
 
 
-         header('Location: ../view/updateUser.php');
-    
+         header('Location: ../view/settings.php');
     }
 
 ?>

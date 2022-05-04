@@ -13,82 +13,62 @@
   
 ?>
 
-<form class="formulaire" action="../controller/updateUserProcess.php" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings- Screaming</title>
+    <link rel="stylesheet" href="/src/app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+</head>
+<body class="bg-[#1D1D1D]">
 
-  <div>
-    <span>Email : </span>
-    <input type="text" name="email" value="<?php echo $email ?>" class="form-control"  placeholder="Entrez votre mail">
-  </div>
+    <?php
+    include("header.php")
+    ?>
 
-    <div>
-        <span>Prénom :</span>
-        <input type="text" name="firstName" value="<?php echo $firstName ?>" class="form-control"  placeholder="Entrez votre prénom">
+    <div class="flex justify-center">
+        <div class="flex flex-col bg-[#343434] m-16  py-6  px-8 rounded">
+            <form action="../controller/updateUserAdmin.php" method="post">
+
+                <div>
+                    <span>Email : </span>
+                    <input type="text" name="email" value="<?php echo $email ?>" class="form-control"  placeholder="Entrez votre mail">
+                </div>
+
+                <div>
+                    <span>Prénom :</span>
+                    <input type="text" name="firstName" value="<?php echo $firstName ?>" class="form-control"  placeholder="Entrez votre prénom">
+                </div>
+
+                <div>
+                    <span>Nom :</span>
+                    <input type="text" name="lastName" value="<?php echo $lastName ?>" class="form-control"  placeholder="Entrez votre nom">
+                </div>
+
+                <div>
+                    <span>Pseudo : </span>
+                    <input type="text" name="username" value="<?php echo $username ?>" class="form-control"  placeholder="Entrez votre pseudo">
+                </div>
+
+                <div>
+                    <span>Mot de passe : </span>
+                    <input type="password" name="password" value="<?php echo $password ?>" class="form-control" placeholder="Entrez un mot de passe">
+                </div>
+                <div class="formButton">
+                    <button type="submit"  class="btn btn-primary">Envoyer</button>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div>
-        <span>Nom :</span>
-        <input type="text" name="lastName" value="<?php echo $lastName ?>" class="form-control"  placeholder="Entrez votre nom">
-    </div>
 
-    <div>
-    <span>Pseudo : </span>
-    <input type="text" name="username" value="<?php echo $username ?>" class="form-control"  placeholder="Entrez votre pseudo">
-  </div>
 
-  <div>
-    <span>Mot de passe : </span>
-    <input type="password" name="password" value="<?php echo $password ?>" class="form-control" placeholder="Entrez un mot de passe">
-  </div>
-  <div class="formButton">
-      <button type="submit"  class="btn btn-primary">Envoyer</button>
-  </div>
-</form>
 
-<style>
-  .title{
-  color: blue;
-  font-size: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-transform: uppercase;
-}
-.subtitle {
-  font-size: 16px;
-  text-transform: capitalize;
-}
-.formulaire {
-  margin-top: 30px;
-}
 
-.formulaire > div{
-    margin-bottom: 20px;
-    width: 600px;
-    display: flex;
-}
-
-.formulaire > div > span{
-  width: 150px;
-}
-
-.formButton{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-@media screen and (max-width: 768px)
-{
-    .title{
-      color: green;
-    }
-    .formulaire > div{
-      display: flex;
-      flex-direction: column;
-    }
-    .exemple{
-      margin-top: 66px;
-    }
-    h5{
-      padding: 1em;
-    }
-}
-</style>
+</body>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="../app.js"></script>
+<script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
+</html>

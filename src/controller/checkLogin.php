@@ -19,6 +19,7 @@
                     $_SESSION['email']= $res['email'];
                     $_SESSION['firstname']= $res['first_name'];
                     $_SESSION['lastname']= $res['last_name'];
+                    $_SESSION['role']= $res['role'];
                     $_SESSION['registration_date']= (date("j M Y",strtotime($res['registration_date'])));
                 } else {
                     echo 'Erreur de login ou mdp';

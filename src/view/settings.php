@@ -90,11 +90,8 @@ $id = $_SESSION['id'];
 
         <div class="flex flex-col lg:w-full w-5/6">
             <div class="bg-[url('../../images/header-cover-settings.jpg')] bg-cover bg-center h-fit px-20 lg:py-40 py-24">
-                <span class="text-4xl text-white">Bonjour <?php echo($_SESSION['username']) ?></span>
+                <span class="text-4xl text-white">Bonjour <?php echo $username ?></span>
                 <p class="text-white mt-6 font-extralight">Il s'agit de votre page profil. Vous pouvez modifier vos informations personnelles dans les champs suivants.</p>
-                <a href="">
-                    <button class="border-2 mt-10 border-[#F14747] text-white px-4 py-2 rounded-md text-1xl font-medium hover:bg-[#F14747] transition duration-300 w-40">Éditer le profil</button>
-                </a>
             </div>
 
             <div class="flex lg:justify-start justify-center">
@@ -102,39 +99,48 @@ $id = $_SESSION['id'];
 
                     <h1 class="text-white text-lg mb-12">Mon compte</h1>
 
-                    <div class="flex lg:flex-row flex-col lg:space-x-6 lg:mb-6 mb-3">
-                        <div class="flex flex-col lg:w-1/2 w-full lg:mb-0 mb-3">
-                            <label for="username" class="text-[#b3b3b3] mb-2"> Nom d'utilisateur</label>
-                            <input type="text" placeholder="arthur.fleck" value="<?php echo $username ?>" id="username" class="rounded">
+
+                    <form action="../controller/updateUserSettings.php" method="post">
+
+                        <div class="flex lg:flex-row flex-col lg:space-x-6 lg:mb-6 mb-3">
+                            <div class="flex flex-col lg:w-1/2 w-full lg:mb-0 mb-3">
+                                <label for="username" class="text-[#b3b3b3] mb-2"> Nom d'utilisateur</label>
+                                <input type="text" name="username" placeholder="arthur.fleck" value="<?php echo $username ?>" id="username" class="rounded">
+                            </div>
+
+                            <div class="flex flex-col lg:w-1/2 w-full">
+                                <label for="email" class="text-[#b3b3b3] mb-2">Adresse e-mail</label>
+                                <input type="text" name="email" placeholder="arthur.fleck@gmail.com" value="<?php echo $email ?>" id="email" class="rounded">
+                            </div>
+
+
                         </div>
 
-                        <div class="flex flex-col lg:w-1/2 w-full">
-                            <label for="email" class="text-[#b3b3b3] mb-2">Adresse e-mail</label>
-                            <input type="text" placeholder="arthur.fleck@gmail.com" value="<?php echo $email ?>" id="email" class="rounded">
+                        <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
+                            <div class="flex flex-col lg:w-1/2 w-full">
+                                <label for="firstname" class="text-[#b3b3b3] mb-2"> Prénom</label>
+                                <input type="text" name="firstName"  placeholder="Arthur" id="firstname" value="<?php echo $firstName ?>" class="rounded">
+                            </div>
+
+                            <div class="flex flex-col lg:w-1/2 w-full">
+                                <label for="lastname" class="text-[#b3b3b3] mb-2">Nom</label>
+                                <input type="text" name="lastName" placeholder="Fleck" value="<?php echo $lastName ?>" id="lastname" class="rounded">
+                            </div>
+
+                        </div>
+
+                        <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
+                            <div class="flex flex-col lg:w-1/2 w-full">
+                                <label for="lastname" class="text-[#b3b3b3] mb-2">Mot de passe</label>
+                                <input type="text" placeholder="Entrez votre mot de passe" name="password" value="<?php echo $password ?>" id="lastname" class="rounded">
+                            </div>
                         </div>
 
 
-                    </div>
+                        <button class="border-2 mt-10 border-[#F14747] text-white px-4 py-2 rounded-md text-1xl font-medium hover:bg-[#F14747] transition duration-300 w-40" type="submit">Éditer le profil</button>
 
-                    <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
-                        <div class="flex flex-col lg:w-1/2 w-full">
-                            <label for="firstname" class="text-[#b3b3b3] mb-2"> Prénom</label>
-                            <input type="text" placeholder="Arthur" id="firstname" value="<?php echo $firstName ?>" class="rounded">
-                        </div>
 
-                        <div class="flex flex-col lg:w-1/2 w-full">
-                            <label for="lastname" class="text-[#b3b3b3] mb-2">Nom</label>
-                            <input type="text" placeholder="Fleck" value="<?php echo $lastName ?>" id="lastname" class="rounded">
-                        </div>
-
-                    </div>
-
-                    <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
-                        <div class="flex flex-col lg:w-1/2 w-full">
-                            <label for="lastname" class="text-[#b3b3b3] mb-2">Mot de passe</label>
-                            <input type="text" placeholder="Entrez votre mot de passe" value="<?php echo $password ?>" id="lastname" class="rounded">
-                        </div>
-                    </div>
+                    </form>
 
 
 
@@ -159,7 +165,7 @@ $id = $_SESSION['id'];
                         </div>
 
                         <div class="my-10 flex flex-col text-center">
-                            <span class="text-white font-bold">Joker</span>
+                            <span class="text-white font-bold"><?php echo $username ?></span>
                             <p class="text-white font-extralight mb-10">Gotham City, États-Unis</p>
                             <p class="text-sm text-white">Rang 3</p>
                             <p class="text-white font-bold">Terreur</p>

@@ -5,92 +5,62 @@ if (!isset($_SESSION['email']))
 ?>
 
 
-<form class="formulaire" action="../controller/createUser.php" method="post">
 
-  <div>
-    <span for="exampleFormControlInput2">Email : </span>
-    <input type="text" name="email"  class="form-control" id="exampleFormControlInput2" placeholder="Entrez votre mail">
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+    <title>Screaming</title>
+</head>
+<body class="bg-[#1D1D1D]">
+
+    <?php
+        include("header.php")
+    ?>
 
 
-    <div>
-        <span for="exampleFormControlInput2">Nom : </span>
-        <input type="text" name="lastName"  class="form-control" id="exampleFormControlInput2" placeholder="Entrez votre mail">
+
+    <div class="flex justify-center">
+        <div class="flex flex-col bg-[#343434] m-16  py-6  px-8 rounded">
+            <form action="../controller/createUser.php" class="flex flex-col space-y-3" method="post">
+
+
+                <input name="firstName" type="text" placeholder="Prénom" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <input name="lastName" type="text" placeholder="Nom" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <input name="username" type="text" placeholder="Nom d'utilisateur" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <input name="email" type="email" placeholder="Email" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <select class="py-3 px-4 border border-gray-400 rounded-md" name="type" id="type" >
+                    <option value="" disabled selected>Type</option>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+                <input name="password" type="password" placeholder="Mot de passe" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <input name="confirmPassword" type="password" placeholder="Confirmez le mot de passe" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                <button class="w-full bg-red-500 text-white p-3 rounded-lg font-semibold text-lg mt-6" type="submit">Créer un compte</button>
+
+
+
+
+
+
+
+            </form>
+        </div>
     </div>
 
 
-    <div>
-        <span for="exampleFormControlInput2">Prénom : </span>
-        <input type="text" name="firstName"  class="form-control" id="exampleFormControlInput2" placeholder="Entrez votre mail">
-    </div>
+    <?php
+    include("footer.php")
+    ?>
 
-  <div>
-    <span for="exampleFormControlInput3">Pseudo : </span>
-    <input type="text" name="username"  class="form-control" id="exampleFormControlInput3" placeholder="Entrez votre pseudo">
-  </div>
-
-  <div>
-      <select class="box-input" name="type" id="type" >
-        <option value="" disabled selected>Type</option>
-        <option value="admin">Admin</option>
-        <option value="user">User</option>
-      </select>
-  </div>
-
-  <div>
-    <span for="exampleFormControlInput4">Mot de passe: </span>
-    <input type="password" name="password"  class="form-control" id="exampleFormControlInput4" placeholder="Entrez un mot de passe">
-  </div>
-  <div class="formButton">
-      <button type="submit"  class="btn btn-primary">Envoyer</button>
-  </div>
-</form>
-
-<style>
-  .title{
-  color: blue;
-  font-size: 25px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-transform: uppercase;
-}
-.subtitle {
-  font-size: 16px;
-  text-transform: capitalize;
-}
-.formulaire {
-  margin-top: 30px;
-}
-
-.formulaire > div{
-    margin-bottom: 20px;
-    width: 600px;
-    display: flex;
-}
-
-.formulaire > div > span{
-  width: 150px;
-}
-
-.formButton{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-@media screen and (max-width: 768px)
-{
-    .title{
-      color: green;
-    }
-    .formulaire > div{
-      display: flex;
-      flex-direction: column;
-    }
-    .exemple{
-      margin-top: 66px;
-    }
-    h5{
-      padding: 1em;
-    }
-}
-</style>
+</body>
+<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+<script src="/src/app.js"></script>
+<script src="https://kit.fontawesome.com/a7e9f794eb.js" crossorigin="anonymous"></script>
+</html>

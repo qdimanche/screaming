@@ -28,6 +28,7 @@ if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['pass
         $_SESSION['firstname']= $data['first_name'];
         $_SESSION['lastname']= $data['last_name'];
         $_SESSION['id']= $data['id'];
+        $_SESSION['role']= $data['role'];
         $_SESSION['registration_date']= (date("j M Y",strtotime($data['registration_date'])));
 
 

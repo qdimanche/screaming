@@ -46,6 +46,26 @@
                                 <li>
                                     <a href="profile.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Profil</a>
                                 </li>
+                                <?php
+
+                                    if($_SESSION['role'] == 'admin') {
+                                ?>
+
+                                        <li>
+                                            <a href="admin.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Admin</a>
+                                        </li>
+                                <?php
+
+                                  }
+
+                                ?>
+
+
+
+
+
+
+
                                 <li>
                                     <a href="../controller/disconnect.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
                                 </li>
@@ -98,6 +118,19 @@
 
                         <div class="flex ">
                             <li><a href="/src/view">Accueil</a></li>
+                            <?php
+
+                            if($_SESSION['role'] == 'admin') {
+                                ?>
+
+                                <li>
+                                    <a href="admin.php">Admin</a>
+                                </li>
+                                <?php
+
+                            }
+
+                            ?>
                             <li><a href="/src/view/#nouveautes">Nouveautés</a></li>
                             <li><a href="/src/view/#films-populaires">Films populaires</a></li>
                         </div>
