@@ -1,4 +1,4 @@
-<footer class="flex flex-col items-center py-12">
+<footer class="flex flex-col items-center py-20">
 
     <div class="grid lg:grid-cols-7 md:grid-cols-4 grid-cols-2 mx-8  lg:gap-6 gap-5 mb-16">
 

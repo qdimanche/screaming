@@ -17,7 +17,7 @@
           $query = $db->prepare($sql);
           $result = $query->execute();
           if($result){
-              header('Location: ../view/index.php');
+              header('Location: ../view/admin.php');
           }else{
               header('Location: ../inscription.php?error=create');
           }

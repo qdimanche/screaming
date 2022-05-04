@@ -4,12 +4,14 @@
     if (!isset($_SESSION['email']))
         header('location:login.php');
 
-    $email = $_SESSION['email'];
-    $firstName = $_SESSION['firstname'];
-    $lastName = $_SESSION['lastname'];
-    $username = $_SESSION['username'];
-    $password = $_SESSION['password'];
-    $id = $_SESSION['id'];
+    $id = $_POST['id'];
+
+    $db = new PDO('mysql:host=localhost;dbname=screaming','root','');
+
+    $check = $db->prepare("SELECT * FROM user WHERE user.id IN ($id)");
+    $check->execute();
+    $data = $check->fetch();
+
   
 ?>
 
@@ -30,36 +32,27 @@
 
     <div class="flex justify-center">
         <div class="flex flex-col bg-[#343434] m-16  py-6  px-8 rounded">
-            <form action="../controller/updateUserAdmin.php" method="post">
 
-                <div>
-                    <span>Email : </span>
-                    <input type="text" name="email" value="<?php echo $email ?>" class="form-control"  placeholder="Entrez votre mail">
-                </div>
+                <form action="../controller/updateUserAdmin.php" class="flex flex-col space-y-3" method="post">
 
-                <div>
-                    <span>Prénom :</span>
-                    <input type="text" name="firstName" value="<?php echo $firstName ?>" class="form-control"  placeholder="Entrez votre prénom">
-                </div>
 
-                <div>
-                    <span>Nom :</span>
-                    <input type="text" name="lastName" value="<?php echo $lastName ?>" class="form-control"  placeholder="Entrez votre nom">
-                </div>
+                    <input name="firstName" type="text" placeholder="Prénom" value="<?php echo $data['first_name'] ?>" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                    <input name="lastName" type="text" placeholder="Nom" value="<?php echo $data['last_name'] ?>" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                    <input name="username" type="text" placeholder="Nom d'utilisateur" value="<?php echo $data['username'] ?>" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                    <input type="hidden" id="id" name="id" value="<?php echo $id ?>">
+                    <input name="email" type="email" placeholder="Email" value="<?php echo $data['email'] ?>" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                    <select class="py-3 px-4 border border-gray-400 rounded-md" name="type" id="type" value="<?php echo $data['role'] ?>" >
+                        <option value="" disabled selected>Type</option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                    <input name="password" type="password" placeholder="Mot de passe" value="<?php echo $data['password'] ?>" class=" py-3 px-4 border border-gray-400 rounded-md" />
+                    <button class="w-full bg-red-500 text-white p-3 rounded-lg font-semibold text-lg mt-6" type="submit">Mettre à jour</button>
 
-                <div>
-                    <span>Pseudo : </span>
-                    <input type="text" name="username" value="<?php echo $username ?>" class="form-control"  placeholder="Entrez votre pseudo">
-                </div>
 
-                <div>
-                    <span>Mot de passe : </span>
-                    <input type="password" name="password" value="<?php echo $password ?>" class="form-control" placeholder="Entrez un mot de passe">
-                </div>
-                <div class="formButton">
-                    <button type="submit"  class="btn btn-primary">Envoyer</button>
-                </div>
-            </form>
+
+
+                </form>
         </div>
     </div>
 
