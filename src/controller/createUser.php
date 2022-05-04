@@ -1,5 +1,5 @@
 <?php
-    if($_POST['email'] && $_POST['username' ]&& $_POST['firstName'] && $_POST['lastName'] && $_POST['password'] ){
+    if($_POST['email'] && $_POST['username']&& $_POST['firstName'] && $_POST['lastName'] && $_POST['password'] ){
           $username = $_POST['username'];
           $password = $_POST['password'];
           $firstName = $_POST['firstName'];

@@ -15,7 +15,7 @@ if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['pass
         $insert = "INSERT INTO user(username, first_name, last_name, email, password, registration_date) VALUES ('$username', '$firstName', '$lastName', '$email', '$password', '$date')";
         $query = $db->prepare($insert);
         $query->execute();
-        header("location:index.php");
+        header("location:../view/index.php");
 
 
         $check = $db->prepare("SELECT * FROM user");

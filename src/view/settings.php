@@ -2,6 +2,16 @@
 session_start();
 if (!isset($_SESSION['email']))
     header('location:login.php');
+
+
+$email = $_SESSION['email'];
+$firstName = $_SESSION['firstname'];
+$lastName = $_SESSION['lastname'];
+$username = $_SESSION['username'];
+$password = $_SESSION['password'];
+$id = $_SESSION['id'];
+
+
 ?>
 
 
@@ -79,7 +89,7 @@ if (!isset($_SESSION['email']))
 
 
         <div class="flex flex-col lg:w-full w-5/6">
-            <div class="bg-[url('../images/header-cover-settings.jpg')] bg-cover bg-center h-fit px-20 lg:py-40 py-24">
+            <div class="bg-[url('../../images/header-cover-settings.jpg')] bg-cover bg-center h-fit px-20 lg:py-40 py-24">
                 <span class="text-4xl text-white">Bonjour <?php echo($_SESSION['username']) ?></span>
                 <p class="text-white mt-6 font-extralight">Il s'agit de votre page profil. Vous pouvez modifier vos informations personnelles dans les champs suivants.</p>
                 <a href="">
@@ -92,25 +102,15 @@ if (!isset($_SESSION['email']))
 
                     <h1 class="text-white text-lg mb-12">Mon compte</h1>
 
-
-                    <label for="bio" class="text-white mb-6"> Biographie</label>
-                    <textarea id="bio"  rows="4"  class="rounded text-black p-4 text-[#9CA3AF]">Courte biographie vous présentant ...
-                </textarea>
-
-
-
-
-                    <p class="text-white mt-12 mb-6">Informations utilisateurs</p>
-
                     <div class="flex lg:flex-row flex-col lg:space-x-6 lg:mb-6 mb-3">
                         <div class="flex flex-col lg:w-1/2 w-full lg:mb-0 mb-3">
                             <label for="username" class="text-[#b3b3b3] mb-2"> Nom d'utilisateur</label>
-                            <input type="text" placeholder="arthur.fleck" id="username" class="rounded">
+                            <input type="text" placeholder="arthur.fleck" value="<?php echo $username ?>" id="username" class="rounded">
                         </div>
 
                         <div class="flex flex-col lg:w-1/2 w-full">
                             <label for="email" class="text-[#b3b3b3] mb-2">Adresse e-mail</label>
-                            <input type="text" placeholder="arthur.fleck@gmail.com" id="email" class="rounded">
+                            <input type="text" placeholder="arthur.fleck@gmail.com" value="<?php echo $email ?>" id="email" class="rounded">
                         </div>
 
 
@@ -119,16 +119,24 @@ if (!isset($_SESSION['email']))
                     <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
                         <div class="flex flex-col lg:w-1/2 w-full">
                             <label for="firstname" class="text-[#b3b3b3] mb-2"> Prénom</label>
-                            <input type="text" placeholder="Arthur" id="firstname" class="rounded">
+                            <input type="text" placeholder="Arthur" id="firstname" value="<?php echo $firstName ?>" class="rounded">
                         </div>
 
                         <div class="flex flex-col lg:w-1/2 w-full">
                             <label for="lastname" class="text-[#b3b3b3] mb-2">Nom</label>
-                            <input type="text" placeholder="Fleck" id="lastname" class="rounded">
+                            <input type="text" placeholder="Fleck" value="<?php echo $lastName ?>" id="lastname" class="rounded">
                         </div>
 
-
                     </div>
+
+                    <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
+                        <div class="flex flex-col lg:w-1/2 w-full">
+                            <label for="lastname" class="text-[#b3b3b3] mb-2">Mot de passe</label>
+                            <input type="text" placeholder="Entrez votre mot de passe" value="<?php echo $password ?>" id="lastname" class="rounded">
+                        </div>
+                    </div>
+
+
 
 
                 </div>

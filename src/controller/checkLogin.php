@@ -13,7 +13,7 @@
                 $query->execute();
                 $res = $query->fetch(PDO::FETCH_ASSOC);
                 if ($res) {
-                    header('Location: index.php');
+                    header('Location: ../view/index.php');
                     $_SESSION['username']= $res['username'];
                     $_SESSION['id']= $res['id'];
                     $_SESSION['email']= $res['email'];
