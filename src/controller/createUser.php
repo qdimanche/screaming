@@ -3,11 +3,12 @@
           $username = $_POST['username'];
           $password = $_POST['password'];
           $firstName = $_POST['firstName'];
+          $role = "User";
           $lastName = $_POST['lastName'];
           $email = $_POST['email'];
           $type = $_POST['type'];
           $date = date('Y-m-d H:i:s');
-          $db = new PDO('mysql:host=localhost;dbname=screaming','root','');
+          $db = new PDO('mysql:host=127.0.0.1; dbname=screaming; charset=UTF8','admin','admin');
           $sql = "SELECT * FROM `user`";
           $result = $db->prepare($sql);
           $result->execute();

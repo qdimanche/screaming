@@ -1,4 +1,4 @@
-<nav class="bg-white px-2 sm:px-4 py-2.5 rounded bg-transparent flex flex-col">
+<nav class="bg-transparent px-2 sm:px-4 py-2.5 rounded bg-transparent flex flex-col">
     <div class="px-8 flex flex-col lg:justify-start justify-between">
         <div class="flex justify-between">
             <div class="flex">
@@ -59,13 +59,6 @@
                                   }
 
                                 ?>
-
-
-
-
-
-
-
                                 <li>
                                     <a href="../controller/disconnect.php" class="block py-2 px-4 text-sm text-white hover:text-[#F14747]">Déconnexion</a>
                                 </li>
@@ -120,7 +113,7 @@
                             <li><a href="/src/view">Accueil</a></li>
                             <?php
 
-                            if($_SESSION['role'] == 'admin') {
+                            if(strtolower($_SESSION['role']) == 'admin' ) {
                                 ?>
 
                                 <li>

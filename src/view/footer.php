@@ -41,20 +41,20 @@
 
         <div>
             <a href="">
-                <img src="/images/icon/facebook.svg" class="w-10">
+                <img src="../../images/icon/facebook.svg" class="w-10">
             </a>
         </div>
 
         <div>
             <a href="">
-                <img src= "/images/icon/instagram.svg" class="w-10 mx-10">
+                <img src= "../../images/icon/instagram.svg" class="w-10 mx-10">
             </a>
         </div>
 
 
         <div>
             <a href="">
-                <img src="/images/icon/twitter.svg" class="w-10">
+                <img src="../../images/icon/twitter.svg" class="w-10">
             </a>
         </div>
 

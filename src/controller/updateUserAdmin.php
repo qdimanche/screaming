@@ -12,7 +12,7 @@
          $type = $_POST['type'];
          $id = $_POST["id"];
 
-         $db = new PDO('mysql:host=localhost;dbname=screaming','root','');
+         $db = new PDO('mysql:host=127.0.0.1; dbname=screaming; charset=UTF8','root','rootroot');
          $sql = "UPDATE user SET email = '$email', first_name = '$firstName', last_name = '$lastName', username = '$username', password = '$password' WHERE id = '$id' ";
          $query = $db->prepare($sql);
          $result = $query->execute();

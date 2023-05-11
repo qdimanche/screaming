@@ -5,7 +5,8 @@ if ($_POST['firstName'] && $_POST['lastName'] && $_POST['email'] && $_POST['pass
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $password = $_POST['password'];
-    $db = new PDO('mysql:host=localhost; dbname=screaming; charset=UTF8', 'root', '');
+    $role = "User";
+    $db = new PDO('mysql:host=127.0.0.1; dbname=screaming; charset=UTF8', 'root', 'rootroot');
     $checkEmail = $db->prepare("SELECT * FROM user WHERE email = '$email'");
     $checkEmail->execute();
     $count = $checkEmail->rowCount();

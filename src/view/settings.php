@@ -10,8 +10,6 @@ $lastName = $_SESSION['lastname'];
 $username = $_SESSION['username'];
 $password = $_SESSION['password'];
 $id = $_SESSION['id'];
-
-
 ?>
 
 
@@ -132,7 +130,7 @@ $id = $_SESSION['id'];
                         <div class="flex lg:flex-row flex-col lg:space-x-6 mb-6">
                             <div class="flex flex-col lg:w-1/2 w-full">
                                 <label for="lastname" class="text-[#b3b3b3] mb-2">Mot de passe</label>
-                                <input type="text" placeholder="Entrez votre mot de passe" name="password" value="<?php echo $password ?>" id="lastname" class="rounded">
+                                <input type="password" placeholder="Entrez votre mot de passe" name="password" value="<?php echo $password ?>" id="lastname" class="rounded">
                             </div>
                         </div>
 

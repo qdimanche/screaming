@@ -23,9 +23,9 @@ if (!isset($_SESSION['email']))
 
 <!--Header-->
 
-<div class="bg-[url('/images/spiral-poster.jpeg')] bg-cover bg-center h-content relative">
+<div class="bg-[url('../../images/spiral-poster.jpeg')] bg-cover bg-center h-content relative">
 
-    <nav class="bg-white px-2 sm:px-4 py-2.5 rounded bg-transparent flex flex-col">
+    <nav class="bg-transparent px-2 sm:px-4 py-2.5 rounded bg-transparent flex flex-col">
         <div class="lg:mx-auto lg:px-16 px-8 flex flex-col lg:justify-start justify-between">
 
 
@@ -87,7 +87,7 @@ if (!isset($_SESSION['email']))
     <div class="grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 lg:gap-6 md:gap-8 gap-6 mt-10">
 
 
-        <div class="bg-[url('/images/the-conjuring-poster.jpg')] bg-cover">
+        <div class="bg-[url('../../images/the-conjuring-poster.jpg')] bg-cover">
             <a href="">
                 <div class="lg:h-[22rem] md:h-[20rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Thriller</span>
@@ -124,7 +124,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/rec-poster.jpg')] bg-cover">
+        <div class="bg-[url('../../images/rec-poster.jpg')] bg-cover">
             <a href="">
                 <div class="lg:h-[22rem] md:h-[20rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Épouvante - Horreur</span>
@@ -161,7 +161,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/ca-poster.jpeg')] bg-cover">
+        <div class="bg-[url('../../images/ca-poster.jpeg')] bg-cover">
             <a href="">
                 <div class="h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Drame</span>
@@ -198,7 +198,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/insidious-poster.jpg')] bg-cover lg:block md:hidden block">
+        <div class="bg-[url('../../images/insidious-poster.jpg')] bg-cover lg:block md:hidden block">
             <a href="">
                 <div class="lg:h-[22rem] md:h-[20rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Épouvante - Horreur</span>
@@ -234,7 +234,7 @@ if (!isset($_SESSION['email']))
             </a>
         </div>
 
-        <div class ="bg-[url('/images/silent-hill-poster.jpg')] bg-cover lg:block hidden">
+        <div class ="bg-[url('../../images/silent-hill-poster.jpg')] bg-cover lg:block hidden">
             <a href="">
                 <div class="h-[22rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Fantastique</span>
@@ -271,7 +271,7 @@ if (!isset($_SESSION['email']))
 
         </div>
 
-        <div class="bg-[url('/images/dame-en-noir-poster.webp')]  bg-cover lg:block hidden">
+        <div class="bg-[url('../../images/dame-en-noir-poster.webp')]  bg-cover lg:block hidden">
             <a href="">
                 <div class="h-[22rem] bg-[#1D1D1D]/60 hover:bg-[#1D1D1D]/50 flex flex-col justify-end pb-5 px-5 ease-in duration-100">
                     <span class="text-sm text-[#F14747] p-1 w-fit">Drame</span>
@@ -320,7 +320,7 @@ if (!isset($_SESSION['email']))
     <div class="grid lg:grid-cols-4 grid-cols-2 mt-10">
 
 
-        <div class="bg-[url('/images/birdbox-poster.jpeg')] bg-cover">
+        <div class="bg-[url('../../images/birdbox-poster.jpeg')] bg-cover">
             <a href="">
                 <div class="lg:h-[28rem] md:h-[30rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Drame</span>
@@ -357,7 +357,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/sansunbruit-poster.jpeg')] bg-cover">
+        <div class="bg-[url('../../images/sansunbruit-poster.jpeg')] bg-cover">
             <a href="">
                 <div class="lg:h-[28rem] md:h-[30rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Thriller</span>
@@ -394,7 +394,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/slender-man-poster-2.jpg')] bg-cover lg:block hidden">
+        <div class="bg-[url('../../images/slender-man-poster-2.jpg')] bg-cover lg:block hidden">
             <a href="">
                 <div class="lg:h-[28rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Thriller</span>
@@ -431,7 +431,7 @@ if (!isset($_SESSION['email']))
         </div>
 
 
-        <div class="bg-[url('/images/america-nightmare-poster.jpg')] bg-cover lg:block hidden">
+        <div class="bg-[url('../../images/america-nightmare-poster.jpg')] bg-cover lg:block hidden">
             <a href="">
                 <div class="lg:h-[28rem] h-[20rem] bg-[#1D1D1D]/40 hover:bg-[#1D1D1D]/20 ease-in-out duration-300 flex flex-col justify-end pb-5 px-5">
                     <span class="text-sm text-[#F14747] bg-[#1D1D1D]/50 p-1 w-fit">Science-fiction</span>
